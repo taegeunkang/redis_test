@@ -62,7 +62,7 @@ class MemoryDBClient:
             # SSL 설정 추가
             if self.use_ssl:
                 connection_args["ssl"] = True
-                connection_args["ssl_context"] = ssl_context
+                # connection_args["ssl_context"] = ssl_context
 
             # 연결 생성
             self.connection = redis.Redis(**connection_args)
@@ -146,7 +146,7 @@ def main():
     port = 6379
     # 인증 정보 설정 (필요한 경우)
     username = None  # ACL이 활성화된 경우 사용자명 설정
-    password = "your-password"  # 암호 인증을 사용하는 경우 설정
+    password = None  # 암호 인증을 사용하는 경우 설정
 
     # 클라이언트 초기화 및 연결
     client = MemoryDBClient(
