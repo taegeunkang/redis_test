@@ -142,7 +142,9 @@ class MemoryDBClient:
 
 def main():
     # 클러스터 정보 설정
-    endpoint = "your-memorydb-cluster-endpoint.amazonaws.com"
+    endpoint = (
+        "clustercfg.healthier-demo-redis.m95rrh.memorydb.ap-northeast-2.amazonaws.com"
+    )
     port = 6379
     # 인증 정보 설정 (필요한 경우)
     username = None  # ACL이 활성화된 경우 사용자명 설정
